@@ -1,0 +1,104 @@
+/* Theme definitions */
+
+/* Dark theme (default) */
+[data-bs-theme="dark"] {
+    --theme-bg-color: #212529;
+    --theme-text-color: #f8f9fa;
+    --theme-card-bg: #343a40;
+    --theme-card-border: #495057;
+    --theme-header-bg: #495057;
+    --theme-header-border: #6c757d;
+    --theme-code-color: #0dcaf0;
+    --theme-pre-bg: #343a40;
+    --theme-pre-color: #f8f9fa;
+    --theme-link-color: #0d6efd;
+    --theme-table-stripe: #495057;
+}
+
+/* Light theme */
+[data-bs-theme="light"] {
+    --theme-bg-color: #ffffff;
+    --theme-text-color: #212529;
+    --theme-card-bg: #ffffff;
+    --theme-card-border: #dee2e6;
+    --theme-header-bg: #f8f9fa;
+    --theme-header-border: #dee2e6;
+    --theme-code-color: #0d6efd;
+    --theme-pre-bg: #f8f9fa;
+    --theme-pre-color: #212529;
+    --theme-link-color: #0d6efd;
+    --theme-table-stripe: #f8f9fa;
+}
+
+/* Apply theme colors to elements */
+body {
+    background-color: var(--theme-bg-color);
+    color: var(--theme-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+    background-color: var(--theme-card-bg);
+    border-color: var(--theme-card-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card-header {
+    background-color: var(--theme-header-bg);
+    border-bottom-color: var(--theme-header-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+code {
+    color: var(--theme-code-color);
+    transition: color 0.3s ease;
+}
+
+pre {
+    background-color: var(--theme-pre-bg);
+    color: var(--theme-pre-color);
+    border-color: var(--theme-card-border);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+pre code {
+    color: var(--theme-pre-color);
+}
+
+a {
+    color: var(--theme-link-color);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--theme-table-stripe);
+}
+
+/* Theme toggle styles */
+.theme-toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: var(--theme-header-bg);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5px;
+    border: 2px solid var(--theme-card-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle-container .bi-moon-stars-fill {
+    color: #6f42c1;
+    font-size: 1.2rem;
+}
+
+.theme-toggle-container .bi-brightness-high-fill {
+    color: #ffc107;
+    font-size: 1.2rem;
+}
+
+.theme-toggle-container button {
+    min-width: 180px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
