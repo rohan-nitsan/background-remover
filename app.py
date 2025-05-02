@@ -71,5 +71,6 @@ def server_error(error):
     return jsonify({'error': 'Server error'}), 500
 
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # 5000 as fallback for local dev
+    app.run(host="0.0.0.0", port=port)
