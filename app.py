@@ -72,5 +72,5 @@ def server_error(error):
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # 5000 as fallback for local dev
+    port = int(os.environ.get("PORT", 8080))  # Changed default port to 8080 for Railway.app
     app.run(host="0.0.0.0", port=port)
